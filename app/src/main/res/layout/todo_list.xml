@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card:cardCornerRadius="@dimen/margin_card_medium"
+    card:cardElevation="@dimen/margin_card_medium"
+    card:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/rv_layout_height"
+        android:padding="@dimen/margin_card_medium_2">
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="@dimen/todo_list_title_width"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_title"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+        <ImageButton
+            android:id="@+id/status_checked"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/todo_list_img_margin_end"
+            android:layout_width="@dimen/img_width"
+            android:background="@color/white"
+            android:src="@drawable/ic_done"
+            android:layout_height="match_parent">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/edit_todo"
+            android:layout_width="@dimen/img_width"
+            android:background="@color/white"
+            android:src="@drawable/ic_edit"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/img_margin_end"
+            android:layout_centerVertical="true">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/delete_todoImg"
+            android:layout_width="@dimen/img_width"
+            android:background="@color/white"
+            android:src="@drawable/ic_delete"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+        </ImageButton>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
